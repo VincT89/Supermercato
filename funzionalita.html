@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Supermercato BitCamp | Home</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            /* Spazio tra gli elementi del form */
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            padding: 10px;
+            border: 1px solid #d3d3d3;
+            /* Bordo solido */
+            border-radius: 0;
+            /* Angoli retti */
+            background-color: #fff;
+            /* Sfondo bianco */
+        }
+
+        button {
+            padding: 10px;
+            border: 1px solid #d3d3d3;
+            /* Bordo solido */
+            background-color: #e7e7e7;
+            /* Sfondo grigio chiaro */
+            color: #333;
+            /* Testo scuro */
+            cursor: pointer;
+            border-radius: 0;
+            /* Angoli retti */
+        }
+
+        button:hover {
+            background-color: #d3d3d3;
+            /* Sfondo grigio al passaggio del mouse */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-lg-5">
+            <a class="navbar-brand" href="#!">Supermercato BitCamp</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="funzionalita.html">Funzionalita'</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sviluppatori.html">Team Sviluppo</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="py-5" style="background-image: url(assets/bg.jpeg);">
+        <div class="container px-lg-5">
+            <div class="p-4 p-lg-5 bg rounded-3 text-center text-white" style="background-color: rgba( 0,0,0,0.9);">
+                <div class="m-4 m-lg-5">
+                    <h1 class="display-5 fw-bold">Benvenuto nel tuo supermercato di fiducia!</h1>
+                    <p class="fs-4">Per poter capire meglio, qui di seguito potrete avere una piccola anteprima del
+                        gestionale</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Page Content-->
+    <section class="pt-4">
+        <div class="container px-lg-5">
+            <!-- Aggiungi Prodotto Form -->
+            <div class="container mt-5">
+                <h2>Aggiungi Prodotto</h2>
+                <form id="formProdotto">
+                    <input type="text" id="nomeProdotto" placeholder="Nome Prodotto">
+                    <input type="text" id="categoriaProdotto" placeholder="Categoria">
+                    <input type="text" id="prezzoProdotto" placeholder="Prezzo">
+                    <button type="submit">Aggiungi</button>
+                </form>
+            </div>
+
+            <!-- Aggiungi Offerta Form -->
+            <div class="container mt-5">
+                <h2>Aggiungi Offerta</h2>
+                <form id="formOfferta">
+                    <select id="selezionaProdotto"></select>
+                    <input type="number" id="scontoOfferta" placeholder="Sconto">
+                    <input type="date" id="inizioOfferta" placeholder="Data Inizio">
+                    <input type="date" id="fineOfferta" placeholder="Data Fine">
+                    <button type="submit">Aggiungi Offerta</button>
+                </form>
+            </div>
+
+            <!-- Ricerca Prodotto -->
+            <div class="container mt-5">
+                <h2>Ricerca Prodotto</h2>
+                <form id="areaRicerca">
+                    <select id="tipoRicerca">
+                        <option value="nome">Nome</option>
+                        <option value="categoria">Categoria</option>
+                      </select>
+                      <input type="text" id="campoRicerca" placeholder="Cerca prodotto...">
+                      <button id="pulsanteRicerca">Cerca</button>
+                      <div id="risultatiRicerca"></div>
+                </form>
+            </div>
+
+            <!-- Visualizzazione Prodotti e Offerte -->
+            <div class="container mt-5" id="visualizzazioneProdotti"></div>
+            <div class="container mt-5" id="visualizzazioneOfferte"></div>
+            <div class="container mt-5" id="visualizzazioneRicerca"></div>
+
+
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Supermercato BitCamp 2024</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
