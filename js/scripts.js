@@ -135,7 +135,7 @@ function gestioneSupermercato(supermercato) {
 			case "1":
 				let nomeProdotto = prompt("Inserisci il nome del prodotto:");
 				let categoriaProdotto = prompt("Inserisci la categoria del prodotto:");
-				let prezzoProdotto = prompt("Inserisci il prezzo del prodotto:");
+				let prezzoProdotto = prompt("Inserisci il prezzo del prodotto (usare il punto per i decimali):");
 				let prodotto = new Prodotto(
 					nomeProdotto,
 					categoriaProdotto,
@@ -146,9 +146,9 @@ function gestioneSupermercato(supermercato) {
 				break;
 			case "2":
 				let nomeProdottoOfferta = prompt("Inserisci il nome del prodotto in offerta:");
-				let scontoOfferta = prompt("Inserisci lo sconto dell'offerta:");
-				let dataInizioOfferta = prompt("Inserisci la data di inizio dell'offerta:");
-				let dataFineOfferta = prompt("Inserisci la data di fine dell'offerta:");
+				let scontoOfferta = prompt("Inserisci lo sconto dell'offerta (es 0.20 uguale a 20%):");
+				let dataInizioOfferta = prompt("Inserisci la data di inizio dell'offerta (dd/mm/yy):");
+				let dataFineOfferta = prompt("Inserisci la data di fine dell'offerta (dd/mm/yy):");
 				let prodottoOfferta = supermercato.prodotti.find(
 					(prodotto) => prodotto.nome === nomeProdottoOfferta
 				);
@@ -172,8 +172,8 @@ function gestioneSupermercato(supermercato) {
 				);
 				if (offertaDaModificare) {
 					let nuovoSconto = prompt("Inserisci il nuovo sconto dell'offerta:");
-					let nuovaDataInizio = prompt("Inserisci la nuova data di inizio dell'offerta:");
-					let nuovaDataFine = prompt("Inserisci la nuova data di fine dell'offerta:");
+					let nuovaDataInizio = prompt("Inserisci la nuova data di inizio dell'offerta (dd/mm/yy):");
+					let nuovaDataFine = prompt("Inserisci la nuova data di fine dell'offerta (dd/mm/yy)0:");
 					offertaDaModificare.sconto = nuovoSconto;
 					offertaDaModificare.dataInizio = nuovaDataInizio;
 					offertaDaModificare.dataFine = nuovaDataFine;
